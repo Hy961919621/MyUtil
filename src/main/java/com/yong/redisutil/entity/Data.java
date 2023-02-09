@@ -1,7 +1,9 @@
 package com.yong.redisutil.entity;
 
+import org.apache.poi.ss.formula.functions.T;
+
 @lombok.Data
-public class Data {
+public class Data<T> {
 
     private String businessTypeNo;
 
@@ -13,6 +15,6 @@ public class Data {
 
     private String content;
 
-    private String strcontent;
+    private T strcontent;
 
 }

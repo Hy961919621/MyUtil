@@ -48,12 +48,13 @@ public class SendDataController {
         data.setContent("");
 
         //定义url
-        String url = "http://localhost:8080/receive";
+//        String url = "http://localhost:8888/receive";
+        String url = "https://172.18.18.77:30127/producer/send/so";
 
         //双重遍历集合，同时发送到对应的接口
         read.forEach(x ->{
             x.forEach(y ->{
-                data.setStrcontent((String) y);
+                data.setStrcontent(y);
                 JSONObject jsonObject = JSON.parseObject(JSON.toJSONString(data));
                 restTemplate.postForObject(url, jsonObject, String.class);
             });
