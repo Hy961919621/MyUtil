@@ -48,8 +48,7 @@ public class SendDataController {
             data.setBusinessTypeNo("DT024");
             data.setSysNo("S001");
             data.setTransmission("1");
-            data.setDataFormatNo("DF002");
-            data.setContent("");
+
 
             //定义url
     //        String url = "https://localhost:8086/producer/send/po";
