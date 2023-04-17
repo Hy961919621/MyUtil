@@ -43,7 +43,7 @@ public class RedisController {
     public ResultData likeKeys(){
 
         //遍历对应的key
-        Collection<String> keys = redisUtil.keys("A*");
+        Collection<String> keys = redisUtil.keys("DT042*");
         //删除key
         keys.forEach(x ->{
             redisUtil.deleteObject(x);
@@ -64,7 +64,7 @@ public class RedisController {
         });
         List<String> newList = new ArrayList<>();
         lists.forEach(x ->{
-            if (x.length() == 3){
+            if (x.length() == 10){
                 newList.add(x);
             }
         });
